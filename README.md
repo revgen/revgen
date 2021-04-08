@@ -7,8 +7,8 @@
     - 🐳 [docker-transmission](https://hub.docker.com/r/rev9en/transmission/)
     - 🐳 [docker-minidlna](https://hub.docker.com/r/rev9en/minidlna/)
 
-- [Ԙ] My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
-- 
+- [[Ԙ]](https://github.com/revgen/myenv) My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
+
 <!--
 **revgen/revgen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
