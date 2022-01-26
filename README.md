@@ -10,6 +10,25 @@
 
 - [[Ԙ]](https://github.com/revgen/myenv) My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
 
+<details>
+  <summary>Click to see bookmarks</summary>
+  
+  #### Useful GitHub repos
+  * [agarrharr/awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
+  * [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+  * [herrbischoff/awesome-command-line-apps](https://git.herrbischoff.com/awesome-command-line-apps/about/)
+  * [herrbischoff/awesome-macos-command-line](https://git.herrbischoff.com/awesome-macos-command-line/about/)
+  * [rothgar/awesome-tuis](https://github.com/rothgar/awesome-tuis)
+  * [jlevy/the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+  * [0nn0/terminal-mac-cheatsheet](https://github.com/0nn0/terminal-mac-cheatsheet)
+  * [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+  #### Cheatsheets
+  * [michaelcurrin.github.io](https://michaelcurrin.github.io/dev-cheatsheets/) - Michael Currin cheatsheets [:octocat:](https://github.com/MichaelCurrin/dev-cheatsheets)
+  * [devhints.io](https://devhints.io/) - Rico's cheatsheets [:octocat:](https://github.com/rstacruz/cheatsheets)
+  * [gto76.github.io](https://gto76.github.io/linux-cheatsheet) - Comprehensive Linux Cheatsheet [:octocat:](https://github.com/gto76/linux-cheatsheet)
+</details>
+
+
 <!--
 **revgen/revgen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
