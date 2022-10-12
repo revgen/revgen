@@ -1,9 +1,9 @@
 ### Hi there 👋
 
 - 📦 Useful docker images:
-    - [🐳 docker-transmission](https://hub.docker.com/r/rev9en/transmission/) → [:octocat:](https://github.com/revgen/transmission)
-    - [🐳 docker-minidlna](https://hub.docker.com/r/rev9en/minidlna/) → [:octocat:](https://github.com/revgen/minidlna)
-    - [🐳 docker-sandbox](https://hub.docker.com/r/rev9en/sandbox/) → [:octocat:](https://github.com/revgen/sandbox)
+    - [🐳 transmission](https://hub.docker.com/r/rev9en/transmission/) → [:octocat:](https://github.com/revgen/docker/docker-transmission)
+    - [🐳 minidlna](https://hub.docker.com/r/rev9en/minidlna/) → [:octocat:](https://github.com/revgen/docker/docker-minidlna)
+    - [🐳 dev-sandbox](https://hub.docker.com/r/rev9en/sandbox/) → [:octocat:](https://github.com/revgen/docker/docker-sandbox)
 
 - [[Ԙ]](https://github.com/revgen/myenv) My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
 
