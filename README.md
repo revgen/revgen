@@ -1,9 +1,9 @@
 ### Hi there 👋
 
 - 📦 Useful docker images:
-    - [🐳 transmission](https://hub.docker.com/r/rev9en/transmission/) → [:octocat: github.com/revgen/docker/docker-transmission](https://github.com/revgen/docker/tree/master/docker-transmission)
-    - [🐳 minidlna](https://hub.docker.com/r/rev9en/minidlna/) → [:octocat: github.com/revgen/docker/docker-minidlna](https://github.com/revgen/docker/tree/master/docker-minidlna)
-    - [🐳 dev-sandbox](https://hub.docker.com/r/rev9en/sandbox/) → [:octocat: github.com/revgen/docker/docker-sandbox](https://github.com/revgen/docker/tree/master/docker-sandbox)
+    - [🐳 transmission](https://hub.docker.com/r/rev9en/transmission/) → [:octocat: github.com/revgen/docker/docker-transmission](https://github.com/revgen/docker/tree/master/docker-transmission#readme)
+    - [🐳 minidlna](https://hub.docker.com/r/rev9en/minidlna/) → [:octocat: github.com/revgen/docker/docker-minidlna](https://github.com/revgen/docker/tree/master/docker-minidlna#readme)
+    - [🐳 dev-sandbox](https://hub.docker.com/r/rev9en/sandbox/) → [:octocat: github.com/revgen/docker/docker-sandbox](https://github.com/revgen/docker/tree/master/docker-sandbox#readme)
 
 - [[Ԙ]](https://github.com/revgen/myenv) My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
 
