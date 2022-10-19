@@ -30,6 +30,7 @@
   * [michaelcurrin.github.io](https://michaelcurrin.github.io/dev-cheatsheets/) - Michael Currin cheatsheets [:octocat:](https://github.com/MichaelCurrin/dev-cheatsheets)
   * [devhints.io](https://devhints.io/) - Rico's cheatsheets [:octocat:](https://github.com/rstacruz/cheatsheets)
   * [gto76.github.io](https://gto76.github.io/linux-cheatsheet) - Comprehensive Linux Cheatsheet [:octocat:](https://github.com/gto76/linux-cheatsheet)
+  * [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) - Emoji Cheat Sheet
 </details>
 
 
