@@ -19,5 +19,10 @@ for script in ~/.dotfiles/scripts/gitpod/*; do
   bash "${script}"
 done
 
+
+echo -e "
+# Custom user settings
+" > "${HOME}/.bashrc.d/99-user"
+
 cd "${CURRENT}"
 rm -rf "${TMPDIR}"
