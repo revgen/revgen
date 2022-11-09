@@ -22,6 +22,10 @@ done
 
 echo -e "
 # Custom user settings
+alias tig='tig --all'
+alias ws='cd ${GITPOD_REPO_ROOT} && pwd'
+alias l='ll'
+alias lt='ls -ATlh'
 " > "${HOME}/.bashrc.d/99-user"
 
 cd "${CURRENT}"
