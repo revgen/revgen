@@ -5,6 +5,12 @@ if [ -z "${GITPOD_WORKSPACE_ID}" ]; then
     exit 1
 fi
 
+# Documentation:
+# * https://www.gitpod.io/docs/configure/user-settings/dotfiles
+# * https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment
+# Template:
+# * https://github.com/gitpod-io/demo-dotfiles-with-gitpod
+
 TMPDIR="$(mktemp -d)"
 CURRENT="${PWD}"
 cd "${TMPDIR}"
