@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>${HOSTNAME}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style type="text/css">
+    /*<![CDATA[*/
+    body, header, h1 {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: ${COLOR_MAIN_BG};
+      color: ${COLOR_MAIN_FG};
+      font-size: 1em;
+      font-family: sans-serif,helvetica;
+      margin-bottom: 1%;
+    }
+    a:link, a:visited {
+      color: ${COLOR_LINK_MAIN};
+    }
+    a:hover {
+      color: ${COLOR_LINK_HOVER};
+    }
+    header {
+      text-align: center;
+      background-color: ${COLOR_TITLE_BG};
+      color: ${COLOR_TITLE_FG};
+      border-top: 2px solid ${COLOR_MAIN_BORDER};
+      border-bottom: 2px solid ${COLOR_MAIN_BORDER};
+    }
+    header nav {
+      float: right;
+      position: absolute;
+      right: 20%;
+      top: 1%;
+      font-size: 3em;
+    }
+    header a:link, header a:link, header a:visited {
+        text-decoration: none;
+        color: ${COLOR_TITLE_FG};
+    }
+    header div h1 {
+      font-weight: bold;
+      font-size: 3em;
+    }
+    article.content,
+    footer,
+    header div {
+      padding: 0 1%;
+      width: 60%;
+      margin: auto;
+    }
+    header div {
+      padding: 1% 1%;
+    }
+    .note {
+      font-size: 0.6em;
+      color: ${COLOR_NOTE_FG};
+      text-align: right;
+    }
+    @media screen and (max-width: 800px) {
+      article.content,
+      footer,
+      header div {
+        width: 86%;
+      }
+      header {
+        text-align: left;
+      }
+      header nav {
+        right: 7%;
+      }
+    }
+    /*]]>*/
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>${HOSTNAME}</h1>
+      <nav>
+        <a href="#options" title="Options">⚙</a>
+        <a href="#menu" title="Menu">☰</a>
+        <!-- ⚙ 📜 📰 🔖 📄 📑 -->
+        <!-- https://unicode-table.com/en/emoji/objects/-->
+      </nav>
+    </div>
+  </header>
+  <article class="content">
+    <p>
+      Nunc quis lacinia quam, et <a href="http://example.com">sagittis nibh</a>. 
+      Aenean rutrum ligula eros, sit amet fringilla risus vehicula at. 
+      Sed vel ornare justo. Nam sapien erat, vehicula eget sem vitae, 
+      vestibulum tincidunt justo. Suspendisse non velit ut diam gravida 
+      dictum a interdum justo. Phasellus sed viverra massa. 
+      Vivamus ultricies eros vitae sem varius, at pellentesque velit convallis. 
+      Etiam congue turpis felis, vitae porttitor nisl viverra sit amet. 
+      Suspendisse placerat efficitur pellentesque. 
+      Nullam id tortor sed nibh molestie dictum. Sed a orci lobortis, iaculis nisl blandit, 
+      eleifend metus. Pellentesque orci libero, porta non mi nec, consequat porttitor lorem.
+    </p>
+    <ul>
+      <li><a href="http://example.com/page1">Suspendisse finibus neque</a></li>
+      <li><a href="http://example.com/page2">Morbi vitae libero porta</a></li>
+      <li><a href="http://example.com/page3">Proin vestibulum sapien vel fermentum ultrices</a></li>
+      <li><a href="http://example.com/page4">Donec massa lacus, eleifend et libero et</a></li>
+    </ul>
+    <p>
+      Fusce tincidunt arcu tortor, et ultrices dui ultrices non. Integer placerat 
+      diam lobortis leo blandit, in facilisis quam viverra. Donec gravida molestie hendrerit. 
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+      Vivamus interdum ex sed augue luctus, ut placerat velit placerat. Duis quis purus augue. 
+      Phasellus vehicula erat ac magna porta consectetur. Aliquam rutrum erat mauris, 
+      ac efficitur augue maximus non. Vivamus nec elit et felis iaculis ornare vel non erat.
+    </p>
+    <p>
+      Vivamus tempor nulla quis quam tincidunt porttitor. Morbi eget quam accumsan, 
+      congue eros sed, bibendum turpis. Duis in lacus ac nibh consequat consequat 
+      vel eget urna. Sed nec velit sem. Vivamus quis diam placerat dolor 
+      lacinia ullamcorper ac sit amet tellus. Mauris congue, magna sit amet imperdiet mattis, 
+      felis nibh placerat lorem, quis suscipit sapien diam dapibus eros. 
+      Quisque vestibulum venenatis felis, vitae semper leo tempor et. 
+      Sed eleifend hendrerit lorem vel consectetur.
+    </p>
+  </article>
+  <footer>
+    <p class="note">- version: ${VERSION}, generated: ${DATETIME_UTC} -</p>
+  </footer>
+</body>
+</html>
