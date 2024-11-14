@@ -1,18 +1,18 @@
 ### Hi there 👋
 
+- [[Ԙ] myenv](https://github.com/revgen/myenv) - ⚙️ settings, 📃 scripts, and 📚 notes for everyday use
 - 📦 Useful docker images:
     - [🐳 transmission](https://hub.docker.com/r/rev9en/transmission/) → [:octocat: github.com/revgen/docker/docker-transmission](https://github.com/revgen/docker/tree/master/docker-transmission#readme)
     - [🐳 minidlna](https://hub.docker.com/r/rev9en/minidlna/) → [:octocat: github.com/revgen/docker/docker-minidlna](https://github.com/revgen/docker/tree/master/docker-minidlna#readme)
     - [🐳 plex](https://hub.docker.com/r/rev9en/plex/) → [:octocat: github.com/revgen/docker/docker-plex](https://github.com/revgen/docker/tree/master/docker-plex#readme)
 
     - [🐳 dev-sandbox](https://hub.docker.com/r/rev9en/sandbox/) → [:octocat: github.com/revgen/docker/docker-sandbox](https://github.com/revgen/docker/tree/master/docker-sandbox#readme)
-
-- [[Ԙ]](https://github.com/revgen/myenv) My 📚 notes, 🛠 tools and ⚙️ settings for everyday use can be found [here](https://github.com/revgen/myenv)
+- [🧰 Toolbox](https://github.com/revgen/toolbox) - a collection of the tools, scripts, and settings from the past or current work
 
 <details>
   <summary>Other projects</summary>
 
-  * ⭐ [Tista Covid-19 Tracker Application](https://covid19.tistatech.com) → [:octocat:](https://github.com/TISTATechnologies/cv19)
+  * ⭐ [Tista Covid-19 Tracker Application](https://covid19.tistatech.com) → [:octocat:](https://github.com/revgen/cv19)
 
 </details>
     
