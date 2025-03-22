@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+set -e
+APP_NAME="$(basename "${0:-""}")"
+DEBUG="${DEBUG:-"false"}"
+# ############################################################################
+## Helper script to work with Dockerfile.
+## The script is reading version/name/description values from the Dockerfile
+## arguments/labels.
+##   * ARG IMAGE_VERSION="0.0.1", ARG VERSION="0.0.1"
+##   * ARG IMAGE_NAME="image-name", ARG NAME="image-name"
+##   * ARG DESCRIPTION="image-description"
+##   * LABEL image.version="0.0.1", LABEL version="0.0.1"
+##   * LABEL image.name="image-name", LABEL name="image-name"
+##   * LABEL image.description="image-description", LABEL description="image-description"
+##
+## Usage: {SCRIPT_NAME} <command> [image-name]
+## 
+## Commands:
+##   build                  - build docker image from the current directory using
+##                            name and version from the Dockerfile
+##   show-version           - read image version from the Dockerfile
+##   show-name              - read image name from the Dockerfile
+##   show-description       - read image description from the Dockerfile
+##   get-versions           - get all versions from the remote Docker repository
+##   get-latest-version     - get latest versions from the remote Docker repository
+#
+# Importat: version, name, and description values must be in double quotes.
+#
+# ############################################################################
+debug() { if [ "${DEBUG}" == "true" ]; then echo >&2 "${1:-""}"; fi }
+show_help() {
+     sed -n '/^##/,/^$/s/^## \{0,1\}//p' "$0" | sed 's/{SCRIPT_NAME}/'"${APP_NAME}"'/g'
+     return 1
+}
+
+assert_dockerfile() {
+    if [ ! -f "./Dockerfile" ]; then echo >&2 "Error: file ./Dockerfile not found in $(pwd)"; exit 1; fi
+}
+
+build_image() {
+    assert_dockerfile
+    image_name="${1:-"$(show_name)"}"
+    image_version="${2:-"$(show_version)"}"
+    echo "Build ${image_name}:${image_version} from $(pwd)."
+    docker build -t "${image_name}" ./ || exit 1
+    docker tag "${image_name}" "${image_name}:${image_version}" || exit 1
+    echo "Done"
+    echo "------------------------------------------------------------"
+    docker image ls "${image_name}"
+}
+
+show_version() {
+    assert_dockerfile
+    grep "image.version\|LABEL VERSION\|ARG VERSION\|ARG IMAGE_VERSION" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+}
+
+show_name() {
+    assert_dockerfile
+    grep "image.name\|LABEL name\|ARG NAME\|ARG IMAGE_NAME" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+}
+
+show_description() {
+    assert_dockerfile
+    grep "image.description\|LABEL description\|ARG DESCRIPTION" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+}
+
+get_versions() {
+    tmpfile="/tmp/${APP_NAME}_${RANDOM}.out"
+    image_name="${1:-"$(show_name)"}"
+    debug "Checking image ${image_name} tags on the repository..."
+    debug "Temporary file: ${tmpfile}"
+    curl -sL https://hub.docker.com/v2/repositories/${image_name}/tags?page_size=1000 > "${tmpfile}"
+    if grep -q "errinfo" "${tmpfile}"; then
+        cat "${tmpfile}"
+        return 1
+    fi
+    cat "${tmpfile}" | jq -r ".results[] | .name" | grep "^[0-9]*\.[0-9]*\.[0-9]*$" | sort -rV
+    # rm -f "${APP_NAME}"
+}
+
+cmd="${1:-"--help"}"
+case "${cmd}" in
+    build)  build_image "${2}" ;;
+    show-version|version) show_version ;;
+    show-name|name) show_name ;;
+    show-description|description) show_description ;;
+    get-versions|all-versions) get_versions "${2}" ;;
+    get-latest-version|latest-version) get_versions "${2}" | head -n 1 ;;
+    help|--help|-h) show_help; exit 1;;
+    *) echo "Error: unknown command '${cmd}'"; exit 1;;
+esac
