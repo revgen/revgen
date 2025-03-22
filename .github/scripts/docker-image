@@ -51,17 +51,20 @@ build_image() {
 
 show_version() {
     assert_dockerfile
-    grep "image.version\|LABEL VERSION\|ARG VERSION\|ARG IMAGE_VERSION" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+    grep "image.version\|LABEL VERSION\|ARG VERSION\|ARG IMAGE_VERSION" ./Dockerfile \
+    | cut -d'=' -f2 | cut -d'\' -f1 | sed 's/"//g' | sed 's/^[ ]*//g' | sed 's/[ ]*$//g' || return 1
 }
 
 show_name() {
     assert_dockerfile
-    grep "image.name\|LABEL name\|ARG NAME\|ARG IMAGE_NAME" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+    grep "image.name\|LABEL name\|ARG NAME\|ARG IMAGE_NAME" ./Dockerfile \
+    | cut -d'=' -f2 | cut -d'\' -f1 | sed 's/"//g' | sed 's/^[ ]*//g' | sed 's/[ ]*$//g' || return 1
 }
 
 show_description() {
     assert_dockerfile
-    grep "image.description\|LABEL description\|ARG DESCRIPTION" ./Dockerfile | cut -d'=' -f2 | sed 's/"//g' || return 1
+    grep "image.description\|LABEL description\|ARG DESCRIPTION" ./Dockerfile \
+    | cut -d'=' -f2 | cut -d'\' -f1 | sed 's/"//g' | sed 's/^[ ]*//g' | sed 's/[ ]*$//g' || return 1
 }
 
 get_versions() {
@@ -71,7 +74,7 @@ get_versions() {
     debug "Temporary file: ${tmpfile}"
     curl -sL https://hub.docker.com/v2/repositories/${image_name}/tags?page_size=1000 > "${tmpfile}"
     if grep -q "errinfo" "${tmpfile}"; then
-        cat "${tmpfile}"
+        >&2 cat "${tmpfile}"
         return 1
     fi
     cat "${tmpfile}" | jq -r ".results[] | .name" | grep "^[0-9]*\.[0-9]*\.[0-9]*$" | sort -rV
