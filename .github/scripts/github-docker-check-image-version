@@ -36,15 +36,18 @@ repo_image_version="$(bash ./docker-image latest-version)"
 IMAGE_NAME="${image_name:-"unknown"}"
 IMAGE_VERSION="${image_version:-"0.0.1"}"
 REPO_IMAGE_VERSION="${repo_image_version:-"null"}"
+IMAGE_DESCRIPTION="$(bash ./docker-image description)"
 
 echo "Image remote version is ${REPO_IMAGE_VERSION}"
 if [ -n "${GITHUB_ENV}" ]; then
     # We need to store system enviornment for Github Action steps
-    echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_ENV
-    echo "IMAGE_VERSION=$IMAGE_VERSION" >> $GITHUB_ENV
-    echo "REPO_IMAGE_VERSION=$REPO_IMAGE_VERSION" >> $GITHUB_ENV
+    echo "IMAGE_NAME=$IMAGE_NAME" | tee -a $GITHUB_ENV
+    echo "IMAGE_DESCRIPTION=$IMAGE_DESCRIPTION" | tee -a $GITHUB_ENV
+    echo "IMAGE_VERSION=$IMAGE_VERSION" | tee -a $GITHUB_ENV
+    echo "REPO_IMAGE_VERSION=$REPO_IMAGE_VERSION" | tee -a $GITHUB_ENV
 else
     echo "IMAGE_NAME=$IMAGE_NAME"
+    echo "IMAGE_DESCRIPTION=$IMAGE_DESCRIPTION"
     echo "IMAGE_VERSION=$IMAGE_VERSION"
     echo "REPO_IMAGE_VERSION=$REPO_IMAGE_VERSION"
 fi
