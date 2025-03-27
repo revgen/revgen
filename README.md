@@ -10,7 +10,7 @@
   * [:octocat:](https://github.com/revgen/docker-minidlna#readme) [minidlna 🐳 ](https://hub.docker.com/r/rev9en/minidlna/) - docker image with minidlna server
   * [:octocat:](https://github.com/revgen/docker-sandbox#readme) [sandbox 🐳 ](https://hub.docker.com/r/rev9en/sandbox/)  - docker image with sandbox environment: ubuntu, python, nodejs, java, etc.
 
-  * [:octocat: sandbox repository](https://github.com/revgen/sandbox) - special repository for learning, temporary, draft code
+  * [:octocat: sandbox repository](https://github.com/revgen/sandbox) - special repository for learning, temporary, and draft code
 
 </details>
 
