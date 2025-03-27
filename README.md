@@ -1,14 +1,16 @@
 ### Hi there 👋 I'm Evgen
 
 
-- [[Ԙ] MyEnv](https://github.com/revgen/myenv) - ⚙️ settings, 📃 scripts, and 📚 notes for everyday use.
+**[[Ԙ] myenv](https://github.com/revgen/myenv)** - my dotfiles: ⚙️ settings, 📃 scripts, and 📚 notes for everyday use.
 
 <details>
-  <summary><strong>🧰 Toolbox</strong> - a collection of the tools, scripts, and settings from the past or current work</summary>
+  <summary><strong>🧰 Toolbox</strong> - a collection of the 🛠️ tools, 📃 scripts, and ⚙️ settings from the past or current work</summary>
 
-  * [🐳 docker image - transmission](https://hub.docker.com/r/rev9en/transmission/) [:octocat:](https://github.com/revgen/docker-transmission#readme)
-  * [🐳 docker image - minidlna](https://hub.docker.com/r/rev9en/minidlna/) [:octocat:](https://github.com/revgen/docker-minidlna#readme)
-  * [🐳 docker image - sandbox](https://hub.docker.com/r/rev9en/sandbox/) [:octocat:](https://github.com/revgen/docker-sandbox#readme)
+  * [:octocat:](https://github.com/revgen/docker-transmission#readme) [🐳 transmission](https://hub.docker.com/r/rev9en/transmission/) - docker image with transmission torrent client
+  * [:octocat:](https://github.com/revgen/docker-minidlna#readme) [🐳 docker image - minidlna](https://hub.docker.com/r/rev9en/minidlna/) - docker image with minidlna server
+  * [:octocat:](https://github.com/revgen/docker-sandbox#readme) [🐳 docker image - sandbox](https://hub.docker.com/r/rev9en/sandbox/)  - docker image with sandbox environment: ubuntu, python, nodejs, java, etc.
+
+  * [:octocat: sandbox repository](https://github.com/revgen/sandbox)
 
 </details>
 
