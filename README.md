@@ -5,10 +5,11 @@
 
 <details>
   <summary><strong>🧰 Toolbox</strong> - a collection of the 🛠️ tools, 📃 scripts, and ⚙️ settings from the past or current work</summary>
+
   * [:octocat:](https://github.com/revgen/docker-workspace#readme) [workspace 🐳](https://hub.docker.com/r/rev9en/workspace/) - docker image with developer environment, based on Ubuntu Linux.
   * [:octocat:](https://github.com/revgen/docker-transmission#readme) [transmission 🐳](https://hub.docker.com/r/rev9en/transmission/) - docker image with transmission torrent client.
   * [:octocat:](https://github.com/revgen/docker-minidlna#readme) [minidlna 🐳 ](https://hub.docker.com/r/rev9en/minidlna/) - docker image with minidlna server.
-  * [:octocat: sandbox repository](https://github.com/revgen/sandbox) - special repository for learning, temporary, and draft code
+  * 🔒 [sandbox repository](https://github.com/revgen/sandbox) - special repository for learning, it contains temporary and draft code
 
 </details>
 
